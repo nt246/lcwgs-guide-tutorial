@@ -1,7 +1,6 @@
-# physalia-lcwgs
-Files for the the Physalia course on Population genomic inference from low-coverage whole-genome sequencing data, Oct 19-22 2020
+# Tutorials for analysis of low-coverage whole genome sequencing data
 
-* [Server log in and data transfer](https://github.com/nt246/physalia-lcwgs/blob/main/server_log_in.md)
+These tutorials were developed by Matteo Fumagalli, Arne Jacobs, Nicolas Lou, and Nina Overgaard Therkildsen. An earlier version was used in the [Physalia course on Population genomic inference from low-coverage whole-genome sequencing data](https://www.physalia-courses.org/courses-workshops/course64/), Oct 19-22 2020
 
 * [Tutorial 1: Data processing](https://github.com/nt246/physalia-lcwgs/blob/main/day_1/markdowns/data_processing.md)
 
