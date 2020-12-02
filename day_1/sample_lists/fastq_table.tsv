@@ -1,0 +1,11 @@
+prefix	lane_number	seq_id	sample_id	population	data_type
+11467X8	lane1	1	892	MAQU	pe
+11677X48	lane2	1	892	MAQU	pe
+11295X32	lane1	1	985	PANY	pe
+11678X32	lane2	1	985	PANY	pe
+11295X44	lane1	1	987	PANY	pe
+11677X37	lane2	1	987	PANY	pe
+11467X6	lane1	1	890	MAQU	pe
+11677X46	lane2	1	890	MAQU	pe
+11295X75	lane1	1	993	PANY	pe
+11678X67	lane2	1	993	PANY	pe

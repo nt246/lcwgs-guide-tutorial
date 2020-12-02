@@ -1,0 +1,15 @@
+/workdir/arne/physalia_lcwgs_data/data_practicals/BAMS/PANY_01.bam
+/workdir/arne/physalia_lcwgs_data/data_practicals/BAMS/PANY_02.bam
+/workdir/arne/physalia_lcwgs_data/data_practicals/BAMS/PANY_03.bam
+/workdir/arne/physalia_lcwgs_data/data_practicals/BAMS/PANY_04.bam
+/workdir/arne/physalia_lcwgs_data/data_practicals/BAMS/PANY_05.bam
+/workdir/arne/physalia_lcwgs_data/data_practicals/BAMS/PANY_06.bam
+/workdir/arne/physalia_lcwgs_data/data_practicals/BAMS/PANY_07.bam
+/workdir/arne/physalia_lcwgs_data/data_practicals/BAMS/PANY_08.bam
+/workdir/arne/physalia_lcwgs_data/data_practicals/BAMS/PANY_09.bam
+/workdir/arne/physalia_lcwgs_data/data_practicals/BAMS/PANY_10.bam
+/workdir/arne/physalia_lcwgs_data/data_practicals/BAMS/PANY_11.bam
+/workdir/arne/physalia_lcwgs_data/data_practicals/BAMS/PANY_12.bam
+/workdir/arne/physalia_lcwgs_data/data_practicals/BAMS/PANY_13.bam
+/workdir/arne/physalia_lcwgs_data/data_practicals/BAMS/PANY_14.bam
+/workdir/arne/physalia_lcwgs_data/data_practicals/BAMS/PANY_15.bam
