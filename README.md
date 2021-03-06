@@ -13,4 +13,10 @@ These tutorials were developed by Matteo Fumagalli, Arne Jacobs, Nicolas Lou, an
 * [Tutorial 4: Natural selection](https://github.com/nt246/physalia-lcwgs/blob/main/day_4/markdowns/01_sfs.md)
 
 
+<br>
+<br>
+
+**Akcnowledgements**: This course material was developed with support from an NSF grant to NOT (OCE‐1756316).
+
+
 
