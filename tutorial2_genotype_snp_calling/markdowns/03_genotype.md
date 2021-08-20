@@ -190,7 +190,7 @@ If you don't obtain an output, it means that for these loci there is no data. Tr
 You have now learnt how to call genotypes with ANGSD and appreciated the effect of data uncertainty.
 You are now going to learn how to perform SNP calling and estimation of allele frequencies.
 
-[click here](https://github.com/nt246/physalia-lcwgs/blob/main/day_2/markdowns/04_snp.md) to move to the next session.
+[click here](https://github.com/nt246/lcwgs-guide-tutorial/blob/main/tutorial2_genotype_snp_calling/markdowns/04_snp.md) to move to the next session.
 
 ------------------------------------
 
