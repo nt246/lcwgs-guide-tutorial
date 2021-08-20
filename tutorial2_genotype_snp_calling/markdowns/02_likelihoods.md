@@ -74,7 +74,7 @@ Try to change some filtering options and record the number of entries in the fin
 You have learnt how to calculate and read genotype likelihood files.
 Now you are going to learn how to perform genotype calling with ANGSD.
 
-[click here](https://github.com/nt246/physalia-lcwgs/blob/main/day_2/markdowns/03_genotype.md) to move to the next session.
+[click here](https://github.com/nt246/lcwgs-guide-tutorial/blob/main/tutorial2_genotype_snp_calling/markdowns/03_genotype.md) to move to the next session.
 
 --------------------------------
 
