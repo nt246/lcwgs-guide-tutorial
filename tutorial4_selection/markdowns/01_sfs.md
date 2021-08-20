@@ -357,7 +357,7 @@ realSFS Results/JIGA.saf.idx Results/MBNS.saf.idx Results/MAQU.saf.idx > Results
 You have now learnt how to estimate 1D and 2D site frequency spectra with ANGSD from low-coverage data without genotype calling.
 In the next session you will see how we can use this information to estimate summary statistics, starting from FST.
 
-[click here](https://github.com/nt246/physalia-lcwgs/blob/main/day_4/markdowns/02_fst.md) to move to the next session.
+[click here](https://github.com/nt246/lcwgs-guide-tutorial/blob/main/tutorial4_selection/markdowns/02_fst.md) to move to the next session.
 
 ------------------------------------
 
