@@ -153,7 +153,7 @@ More sophisticated filtering can be done, but this is outside the scope of this 
 You have learnt how to build a basic pipeline in ANGSD.
 Next you are going to learn how to calculate genotype likelihoods in ANGSD.
 
-[click here](https://github.com/nt246/physalia-lcwgs/blob/main/day_2/markdowns/02_likelihoods.md) to move to the next session.
+[click here](https://github.com/nt246/lcwgs-guide-tutorial/blob/main/tutorial2_genotype_snp_calling/markdowns/02_likelihoods.md) to move to the next session.
 
 ---------------------------------------
 
