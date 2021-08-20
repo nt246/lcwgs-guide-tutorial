@@ -84,7 +84,7 @@ In which part of our test sequence does JIGA display signatures of selection?
 Now you have learnt how estimate FST and PBS from low-coverage data without even assigning allele frequencies.
 Next you will learn how to estimate nucleotide diversity 
 
-[click here](https://github.com/nt246/physalia-lcwgs/blob/main/day_4/markdowns/03_diversity.md) to move to the next session.
+[click here](https://github.com/nt246/lcwgs-guide-tutorial/blob/main/tutorial4_selection/markdowns/03_diversity.md) to move to the next session.
 
 -------------------------
 
