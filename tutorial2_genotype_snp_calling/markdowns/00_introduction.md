@@ -56,7 +56,7 @@ The **workflow** is roughly divided into four steps:
 
 You are now going to learn how to build your first pipeline in ANGSD for data processing and filtering.
 
-[click here](https://github.com/nt246/physalia-lcwgs/blob/main/day_2/markdowns/01_filtering.md) to move to the next session.
+[click here](https://github.com/nt246/lcwgs-guide-tutorial/blob/main/tutorial2_genotype_snp_calling/markdowns/01_filtering.md) to move to the next session.
 
 -----------------------------------------------
 
