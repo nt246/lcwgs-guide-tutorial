@@ -16,7 +16,12 @@ These tutorials were developed by Matteo Fumagalli, Arne Jacobs, Nicolas Lou, an
 <br>
 <br>
 
-**Akcnowledgements**: This course material was developed with support from an NSF grant to NOT (OCE‐1756316).
+**Acknowledgements**: This course material was developed with support from an NSF grant to NOT (OCE‐1756316).
 
+**Other resources**: 
+
+Please check out our [beginner's guide to low-coverage whole gneome sequencing](https://doi.org/10.1111/mec.16077).
+
+We also maintain two GitHub repos that host a collection of scripts for the efficient high-throughput [processing](https://github.com/therkildsen-lab/data-processing) and [analysis](https://github.com/therkildsen-lab/genomic-data-analysis) of lcWGS data.
 
 
