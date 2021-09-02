@@ -18,6 +18,9 @@ These tutorials were developed by Matteo Fumagalli, Arne Jacobs, Nicolas Lou, an
 
 **Acknowledgements**: This course material was developed with support from an NSF grant to NOT (OCE‐1756316).
 
+<br>
+<br>
+
 **Other resources**: 
 
 Please check out our [beginner's guide to low-coverage whole gneome sequencing](https://doi.org/10.1111/mec.16077).
