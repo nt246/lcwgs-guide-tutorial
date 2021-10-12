@@ -56,6 +56,13 @@ DATA=$BASEDIR/bam
 REF=$BASEDIR/reference/Ref.fa
 ANC=$BASEDIR/reference/outgrp_ref.fa
 ANGSD=/programs/angsd0.930/angsd/angsd ## This is the path to ANGSD on Cornell BioHPC servers. Make sure that you change this when running on a different server.
+SAMTOOLS=samtools ## This is the path to samtools on Cornell BioHPC servers. Make sure that you change this when running on a different server.
+```
+
+We will also need to index the reference file using samtools
+
+```{bash eval=FALSE}
+$SAMTOOLS faidx $REF
 ```
 
 The **workflow** for this session looks like this
