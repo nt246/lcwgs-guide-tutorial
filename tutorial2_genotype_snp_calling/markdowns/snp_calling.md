@@ -36,9 +36,9 @@ create two folders on your working directory, one for your results and
 one for your intermediate data.
 
 Make sure you have cloned this GitHub repository to your Linux server,
-and change your current working directory to the
-`tutorial2_genotype_snp_calling folder`. Set this path as your
-`BASEDIR`. For example:
+ideally to your home directory, and change your current working
+directory to the `tutorial2_genotype_snp_calling folder`. Set this path
+as your `BASEDIR`. For example:
 
 ``` bash
 BASEDIR=~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling
@@ -59,6 +59,7 @@ Let’s set all environment variables
 DATA=$BASEDIR/bam
 REF=$BASEDIR/reference/Ref.fa
 ANC=$BASEDIR/reference/outgrp_ref.fa
+ANGSD=/programs/angsd0.930/angsd/angsd ## This is the path to ANGSD on Cornell BioHPC servers. Make sure that you change this when running on a different server.
 ```
 
 The **workflow** for this session looks like this
@@ -196,7 +197,7 @@ First we need to define input and output files (please note that here we
 do not run these intermediate steps, as you can see thare is a `#` in
 the front):
 
-    # angsd -b  $BASEDIR/sample_lists/ALL_bams.txt -ref $REF -out results/ALL \
+    # $ANGSD -b  $BASEDIR/sample_lists/ALL_bams.txt -ref $REF -out results/ALL \
     ...
 
 with `-b` we give the file including paths to all BAM files we need to
@@ -206,7 +207,7 @@ prefix for all output files that will be generated.
 Next we need to define some basic filtering options. First we define
 filters based on reads quality.
 
-    # angsd -b  $BASEDIR/sample_lists/ALL_bams.txt -ref $REF -out results/ALL \
+    # $ANGSD -b  $BASEDIR/sample_lists/ALL_bams.txt -ref $REF -out results/ALL \
     #        -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
     ...
 
@@ -232,22 +233,18 @@ achieved by the `-minInd` option.
 </summary>
 
 ``` bash
-...
-# angsd -b  $BASEDIR/sample_lists/ALL_bams.txt -ref $REF -out results/ALL \
-#        -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
-#        -minMapQ 20 -minQ 20 -minInd 5 -setMinDepth 7 -setMaxDepth 30 -doCounts 1 \
-...
+$ANGSD -b  $BASEDIR/sample_lists/ALL_bams.txt -ref $REF -out results/ALL \
+-uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
+-minMapQ 20 -minQ 20 -minInd 5 -setMinDepth 7 -setMaxDepth 30 -doCounts 1 \
 ```
-
-</details>
 
 which corresponds to the following scenario:
 
-| Parameter        | Meaning                                              |
-| ---------------- | ---------------------------------------------------- |
-| \-minInd 5       | use only sites with data from at least N individuals |
-| \-setMinDepth 7  | minimum total depth                                  |
-| \-setMaxDepth 30 | maximum total depth                                  |
+    Parameter | Meaning |
+    --- | --- |
+    -minInd 5 | use only sites with data from at least N individuals |
+    -setMinDepth 7 | minimum total depth |
+    -setMaxDepth 30 | maximum total depth |
 
 More sophisticated filtering can be done, but this is outside the scope
 of this practical.

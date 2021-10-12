@@ -10,3 +10,4 @@ tutorial1_data_processing/reference/*fai
 tutorial1_data_processing/reference/*dict
 tutorial1_data_processing/reference/*dict
 tutorial1_data_processing/sample_lists/bam_list_dedup_overlapclipped.list
+tutorial2_genotype_snp_calling/results
