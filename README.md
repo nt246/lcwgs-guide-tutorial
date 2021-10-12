@@ -4,7 +4,7 @@ These tutorials were developed by Matteo Fumagalli, Arne Jacobs, Nicolas Lou, an
 
 * [Tutorial 1: Data processing](https://github.com/nt246/lcwgs-guide-tutorial/blob/main/tutorial1_data_processing/markdowns/data_processing.md)
 
-* [Tutorial 2: Genotype and SNP calling](https://github.com/nt246/lcwgs-guide-tutorial/blob/main/tutorial2_genotype_snp_calling/markdowns/00_introduction.md)
+* [Tutorial 2: Genotype and SNP calling](https://github.com/nt246/lcwgs-guide-tutorial/blob/main/tutorial2_genotype_snp_calling/markdowns/snp_calling.md)
 
 * [Tutorial 3a: Linkage disequilibrium](https://github.com/nt246/lcwgs-guide-tutorial/blob/main/tutorial3_ld_popstructure/markdowns/ld.md)
 
