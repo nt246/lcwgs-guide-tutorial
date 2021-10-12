@@ -4,6 +4,7 @@ Tutorial 2: Genotype and SNP calling
   - [Introduction](#introduction)
   - [Initial preparation](#initial-preparation)
   - [Data filtering and I/O](#data-filtering-and-io)
+  - [Genotype likelihoods](#genotype-likelihoods)
 
 <br> <br>
 
@@ -93,7 +94,7 @@ First, we will learn **how to build a command line in ANGSD**.
 To see a full list of options in ANGSD type:
 
 ``` bash
-angsd --help
+$ANGSD --help
 ```
 
 and you should see something like
@@ -126,14 +127,14 @@ and you should see something like
          In general the specific analysis outputs specific files, but we support basic bcf output
         -doBcf      Wrapper around -dopost -domajorminor -dofreq -gl -dovcf docounts
     For information of specific options type: 
-        ./angsd METHODNAME eg 
-            ./angsd -GL
-            ./angsd -doMaf
-            ./angsd -doAsso etc
-            ./angsd sites for information about indexing -sites files
+        $ANGSD METHODNAME eg 
+            $ANGSD -GL
+            $ANGSD -doMaf
+            $ANGSD -doAsso etc
+            $ANGSD sites for information about indexing -sites files
     Examples:
         Estimate MAF for bam files in 'list'
-            './angsd -bam list -GL 2 -doMaf 2 -out RES -doMajorMinor 1'
+            '$ANGSD -bam list -GL 2 -doMaf 2 -out RES -doMajorMinor 1'
 
 ANGSD can accept several input files, as described
 [here](http://popgen.dk/angsd/index.php/Input):
@@ -159,7 +160,7 @@ ls $BASEDIR/sample_lists/*_bams.txt
 
 If the input file is in BAM format, the possible options are:
 
-    angsd -bam
+    $ANGSD -bam
     ...
     parseArgs_bambi.cpp: bam reader:
         -bam/-b     (null)  (list of BAM/CRAM files)
@@ -233,9 +234,10 @@ achieved by the `-minInd` option.
 </summary>
 
 ``` bash
+cd $BASEDIR
 $ANGSD -b  $BASEDIR/sample_lists/ALL_bams.txt -ref $REF -out results/ALL \
--uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
--minMapQ 20 -minQ 20 -minInd 5 -setMinDepth 7 -setMaxDepth 30 -doCounts 1 \
+       -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
+       -minMapQ 20 -minQ 20 -minInd 5 -setMinDepth 7 -setMaxDepth 30 -doCounts 1
 ```
 
 which corresponds to the following scenario:
@@ -246,8 +248,116 @@ which corresponds to the following scenario:
     -setMinDepth 7 | minimum total depth |
     -setMaxDepth 30 | maximum total depth |
 
+</details>
+
 More sophisticated filtering can be done, but this is outside the scope
 of this practical.
 
 You have learnt how to build a basic pipeline in ANGSD. Next you are
 going to learn how to calculate genotype likelihoods in ANGSD.
+
+<br>
+
+## Genotype likelihoods
+
+![stage1](../files/stage1.png)
+
+We now wish to calculate the ***genotype likelihoods*** for each site at
+each individual.
+
+To do so you need to specify which genotype likelihood model to use.
+
+    $ANGSD -GL
+    ...
+    -GL=0: 
+        1: SAMtools
+        2: GATK
+        3: SOAPsnp
+        4: SYK
+        5: phys
+        6: Super simple sample an allele type GL. (1.0,0.5,0.0)
+        7: outgroup gls
+        -trim       0       (zero means no trimming)
+        -tmpdir     angsd_tmpdir/   (used by SOAPsnp)
+        -errors     (null)      (used by SYK)
+        -minInd     0       (0 indicates no filtering)
+    
+    Filedumping:
+        -doGlf  0
+        1: binary glf (10 log likes)    .glf.gz
+        2: beagle likelihood file   .beagle.gz
+        3: binary 3 times likelihood    .glf.gz
+        4: text version (10 log likes)  .glf.gz
+
+A description of these different implementation can be found
+[here](http://www.popgen.dk/angsd/index.php/Genotype_likelihoods). The
+GATK model refers to the first GATK paper, SAMtools is somehow more
+sophisticated (non-independence of errors), SOAPsnp requires a reference
+sequence for recalibration of quality scores, SYK is error-type
+specific. For most applications and data, GATK and SAMtools models
+should give similar results.
+
+Let’s first assume we will work with PANY samples only. A possible
+command line to calculate genotype likelihoods might be:
+
+<details>
+
+<summary> click here to show it </summary>
+
+``` bash
+cd $BASEDIR
+$ANGSD -b $BASEDIR/sample_lists/PANY_bams.txt -ref $REF -out results/PANY \
+        -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 \
+        -minMapQ 20 -minQ 20 -minInd 5 -setMinDepth 7 -setMaxDepth 30 -doCounts 1 \
+        -GL 2 -doGlf 4
+```
+
+</details>
+
+where we specify: \* -GL 2: genotype likelihood model as in GATK \*
+-doGlf 4: output in text format
+
+Ignore the various warning messages. If it is too slow, the add
+`-nThreads 10` at the end of the command line. This command should take
+around 2 minutes to run.
+
+![stage1A](../files/stage1A.png)
+
+**QUESTION** What are the output files? What’s the information inside
+them?
+
+``` bash
+ls $BASEDIR/results/PANY.*
+```
+
+<details>
+
+<summary> click here for help </summary>
+
+``` bash
+less -S $BASEDIR/results/PANY.arg ## you can press Q to quit less
+less -S $BASEDIR/results/PANY.glf.gz ## you can press Q to quit less
+```
+
+Have a look at .glf.gz file. The first two columns are the reference
+sequence (e.g. chromososome) and position. Then you have 10 likelihoods
+for all possible genotypes in the order AA,AC,AG,AT,CC,CG,CT,GG,GT,TT.
+This set of 10 likelihoods is repeated sequentially starting from the
+left of the file for each individual in the row order of individuals in
+the BAM file. The values are log-scaled likelihood ratios, all scaled by
+the most likely genotype.
+
+Since the likelihoods have been scaled to the most likely and
+log-transformed, the most likely genotype will have a value of 0.
+
+</details>
+
+**BONUS QUESTION** Try to output files in binary format. Which option
+should you use? Can you open these files? Look at the file sizes of text
+vs binary format. Which one is smaller? Which one would you use?
+
+**BONUS QUESTION** Try to change some filtering options and record the
+number of entries in the final output file.
+
+You have learnt how to calculate and read genotype likelihood files. Now
+you are going to learn how to perform genotype calling with ANGSD.
