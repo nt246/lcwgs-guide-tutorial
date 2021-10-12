@@ -1,0 +1,15 @@
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/PANY_01.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/PANY_02.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/PANY_03.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/PANY_04.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/PANY_05.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/PANY_06.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/PANY_07.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/PANY_08.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/PANY_09.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/PANY_10.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/PANY_11.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/PANY_12.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/PANY_13.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/PANY_14.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/PANY_15.bam

@@ -2,3 +2,11 @@
 .Rhistory
 .RData
 .Ruserdata
+tutorial1_data_processing/adapter_clipped
+tutorial1_data_processing/bam
+tutorial1_data_processing/fastqc
+tutorial1_data_processing/reference/*bt2
+tutorial1_data_processing/reference/*fai
+tutorial1_data_processing/reference/*dict
+tutorial1_data_processing/reference/*dict
+tutorial1_data_processing/sample_lists/bam_list_dedup_overlapclipped.list

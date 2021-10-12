@@ -1,0 +1,15 @@
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/MAQU_01.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/MAQU_02.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/MAQU_03.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/MAQU_04.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/MAQU_05.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/MAQU_06.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/MAQU_07.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/MAQU_08.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/MAQU_09.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/MAQU_10.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/MAQU_11.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/MAQU_12.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/MAQU_13.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/MAQU_14.bam
+~/lcwgs-guide-tutorial/tutorial2_genotype_snp_calling/bam/MAQU_15.bam
