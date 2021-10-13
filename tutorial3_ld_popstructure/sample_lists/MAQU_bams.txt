@@ -1,0 +1,15 @@
+bam/MAQU_01.bam
+bam/MAQU_02.bam
+bam/MAQU_03.bam
+bam/MAQU_04.bam
+bam/MAQU_05.bam
+bam/MAQU_06.bam
+bam/MAQU_07.bam
+bam/MAQU_08.bam
+bam/MAQU_09.bam
+bam/MAQU_10.bam
+bam/MAQU_11.bam
+bam/MAQU_12.bam
+bam/MAQU_13.bam
+bam/MAQU_14.bam
+bam/MAQU_15.bam
