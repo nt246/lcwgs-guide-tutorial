@@ -174,7 +174,7 @@ Mme_chr24_2558528-4558528 \
 
 <br>
 
-Examine the pdf file that the script outputs. If you have not got the code to work, see the [plot that we have generated](https://github.com/nt246/physalia-lcwgs/blob/main/day_3/ngsld/LD_blocks.r2.pdf).
+Examine the pdf file that the script outputs. If you have not got the code to work, see the [plot that we have generated](https://github.com/nt246/lcwgs-guide-tutorial/blob/main/tutorial3_ld_popstructure/ngsld/LD_blocks.r2.pdf).
 
 Do you notice any interesting pattern in this plot of LD blocks? What do you think is causing this pattern and why?
 
