@@ -29,7 +29,7 @@ probabilities. Most methods take genotype uncertainty into account
 instead of basing the analysis on called genotypes. This is especially
 useful for low and medium depth data.*
 
-<br>
+<br> <br>
 
 ## Initial preparation
 
@@ -41,7 +41,7 @@ one for your intermediate data.
 
 Make sure you have cloned this GitHub repository to your Linux server,
 ideally to your home directory, and change your current working
-directory to the `tutorial2_genotype_snp_calling folder`. Set this path
+directory to the `tutorial2_genotype_snp_calling` folder. Set this path
 as your `BASEDIR`. For example:
 
 ``` bash
@@ -93,7 +93,7 @@ The **workflow** is roughly divided into four steps:
 You are now going to learn how to build your first pipeline in ANGSD for
 data processing and filtering.
 
-<br>
+<br> <br>
 
 ## Data filtering and I/O
 
@@ -266,7 +266,7 @@ of this practical.
 You have learnt how to build a basic pipeline in ANGSD. Next you are
 going to learn how to calculate genotype likelihoods in ANGSD.
 
-<br>
+<br> <br>
 
 ## Genotype likelihoods
 
@@ -371,6 +371,8 @@ number of entries in the final output file.
 
 You have learnt how to calculate and read genotype likelihood files. Now
 you are going to learn how to perform genotype calling with ANGSD.
+
+<br> <br>
 
 ## Genotype calling
 
@@ -609,6 +611,8 @@ You have now learnt how to call genotypes with ANGSD and appreciated the
 effect of data uncertainty. You are now going to learn how to perform
 SNP calling and estimation of allele frequencies.
 
+<br> <br>
+
 ## SNP calling and allele frequencies
 
 ![stage3](../files/stage3.png)
@@ -730,6 +734,8 @@ frequency is above a certain threhsold (e.g. the frequency of a
 singleton) or whose probability of being variable is above a specified
 value.
 
+-----
+
 **QUICK EXERCISE**
 
 As an illustration, call SNPs by computing: - genotype likelihoods using
@@ -756,6 +762,8 @@ dedicated filtering should be perform to assess robustness of your
 called SNPs.
 
 ![stage3A](../files/stage3A.png)
+
+-----
 
 **QUICK EXERCISE**
 
@@ -797,16 +805,13 @@ script will also print out the first 20 discordant sites (pK.EM is the
 p-value for the SNP calling test).
 
 ``` bash
-Rscript -e 'mafs1 <- read.table(gzfile("$BASEDIR/results/PANY.1e-2.mafs.gz"), he=T, row.names=NULL, strings=F); mafs5 <- read.table(gzfile("$BASEDIR/results/PANY.0.05.mafs.gz"), header=T, row.names=NULL, stringsAsFact=F); mafs5[!(mafs5[,2] %in% mafs1[,2]),][1:20,]; pdf(file="$BASEDIR/results/diffSnpCall.pdf"); par(mfrow=c(1,2)); hist(as.numeric(mafs5[!(mafs5[,2] %in% mafs1[,2]),][,6]), main="Discordant SNPs", xlab="MAF", xlim=c(0,0.5)); hist(as.numeric(mafs5[(mafs5[,2] %in% mafs1[,2]),][,6]), main="Concordant SNPs", xlab="MAF", xlim=c(0,0.5)); dev.off();'
+cd $BASEDIR
+Rscript -e 'mafs1 <- read.table(gzfile("results/PANY.1e-2.mafs.gz"), he=T, row.names=NULL, strings=F); mafs5 <- read.table(gzfile("results/PANY.0.05.mafs.gz"), header=T, row.names=NULL, stringsAsFact=F); mafs5[!(mafs5[,2] %in% mafs1[,2]),][1:20,]; pdf(file="results/diffSnpCall.pdf"); par(mfrow=c(1,2)); hist(as.numeric(mafs5[!(mafs5[,2] %in% mafs1[,2]),][,6]), main="Discordant SNPs", xlab="MAF", xlim=c(0,0.5)); hist(as.numeric(mafs5[(mafs5[,2] %in% mafs1[,2]),][,6]), main="Concordant SNPs", xlab="MAF", xlim=c(0,0.5)); dev.off();'
 ```
 
-You can scp the pdf file to your local machine (from your local machine:
-scp -i XYZ.pem <userX@IP>:\~/day2/$BASEDIR/results/diffSnpCall.pdf .)
-and visualise it with
-
-``` bash
-evince $BASEDIR/results/diffSnpCall.pdf
-```
+You can `scp` the `results/diffSnpCall.pdf` file to your local machine
+to compare the inferred allele frequencies of concordant vs. discordant
+sites.
 
 What can you conclude from these results? Which frequencies are more
 difficult to estimate and therefore affect SNP calling?
