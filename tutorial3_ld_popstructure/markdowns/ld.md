@@ -11,12 +11,9 @@ Linkage disequilibrium estimation
       - [Prepare the input files](#prepare-the-input-files)
       - [Run ngsLD](#run-ngsld)
       - [Visualize LD blocks](#visualize-ld-blocks)
-          - [Transfer the input file and the script to your local
-            computer](#transfer-the-input-file-and-the-script-to-your-local-computer)
           - [Install required R packages on your local
             computer](#install-required-r-packages-on-your-local-computer)
-          - [Run `LD_blocks.sh` on your local
-            computer](#run-ld_blocks.sh-on-your-local-computer)
+          - [Run `LD_blocks.sh`](#run-ld_blockssh)
       - [LD pruning](#ld-pruning)
           - [Run LD pruning](#run-ld-pruning)
           - [Generate an LD-pruned SNP
@@ -63,23 +60,14 @@ to be specified every time we run our scripts in a new login session.
 
 ## Set the project directory as a variable named `BASEDIR`
 
-Let’s continue working within the `exercises` directory we created in
-our home directory. We’ll copy today’s data files into a new directory
-named `day3` within the `exercises` directory with the following
-commands
-
-> Hint: Use `pwd` to check the path to where you created your exercises
-> directory, and change the `~/exercises/day3/` and the BASEDIR
-> specification if that is not the correct path to your base directory
+Again, make sure you have cloned this GitHub repository to your Linux
+server, ideally to your home directory, and change your current working
+directory to the `tutorial3_ld_popstructure` folder. Set this path as
+your `BASEDIR`. For example:
 
 ``` bash
 
-## Copy the shared project directory to your home directory
-cp ~/Share/day3/ ~/exercises/ -r
-
-## Define BASEDIR as your project directory
-BASEDIR=~/exercises/day3/ # Note that no spaces are allowed! 
-
+BASEDIR=~/lcwgs-guide-tutorial/tutorial3_ld_popstructure
 cd $BASEDIR
 ls
 ```
@@ -88,18 +76,16 @@ ls
 
 ## Specify the path to required programs as variables
 
-When running these scripts on the Physalia server, run the following:
+Save the path to ngsLD as a variable named `NGSLD`. For example:
 
 ``` bash
 
-NGSLD=~/Share/ngsLD/
+NGSLD=/programs/ngsLD/ ## This is the path to ngsLD on Cornell BioHPC servers. Make sure that you change this when running on a different server.
 ```
 
-<br>
-
-If you will be running these programs on a different system, you will
-have to specify the paths to the different programs on that system (or
-add them to your $PATH).
+Note that this is the path to the folder that contains the `ngsLD`
+executable, but not the `ngsLD` executable itself. The reason is that we
+will use other scripts with this folder.
 
 <br>
 
@@ -187,25 +173,7 @@ page](https://github.com/fgvieira/ngsLD).
 
 ## Visualize LD blocks
 
-For this exercise and this exercise only, you will run the script on
-your local computer because we could not make the necessary packages
-work in the version of R available on the server.
-
-<br>
-
-### Transfer the input file and the script to your local computer
-
-First, on your computer, use the `cd` command to switch to a directory
-where you would like to receive these files.
-
-Then, edit the pem file path and name, user name, IP address of the
-following script and run it.
-
-``` bash
-
-# scp -i "c2.pem" user2@34.220.201.184:~/exercises/day3/ngsld/MME_ANGSD_PCA_subsampled.ld ./
-# scp -i "c2.pem" user2@34.220.201.184:~/exercises/day3/scripts/LD_blocks.sh ./
-```
+Now, we’ll visualize the LD estimation results using an R script.
 
 <br>
 
@@ -220,9 +188,32 @@ install.packages("reshape2")
 install.packages("gtools")
 ```
 
-\<br\<
+<details>
 
-### Run `LD_blocks.sh` on your local computer
+<summary> Click here if you are having trouble installing LDheatmap
+</summary>
+
+If you see the following error message when installing `LDheatmap`
+
+    ERROR: dependency ‘snpStats’ is not available for package ‘LDheatmap’
+
+You can try to install `snpStats` using
+
+``` r
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("snpStats")
+```
+
+Once `snpStats` is installed, you can run
+`install.packages("LDheatmap")` again.
+
+</details>
+
+<br>
+
+### Run `LD_blocks.sh`
 
 We will use a script slightly modified from the original `LD_blocks.sh`
 script provided by ngsLD to generate a plot of LD blocks in our data. It
@@ -236,7 +227,9 @@ Run the following script in command line.
 
 ``` bash
 
-cat MME_ANGSD_PCA_subsampled.ld | bash LD_blocks.sh \
+cd  $BASEDIR/ngsld
+
+cat $BASEDIR/ngsld/MME_ANGSD_PCA_subsampled.ld | bash $BASEDIR/scripts/LD_blocks.sh \
 Mme_chr24_2558528-4558528 \
 200000 \
 1400000
@@ -290,11 +283,10 @@ process and how many were lost?
 ### Generate an LD-pruned SNP list
 
 We will use R to generate an LD-pruned SNP list in a format that can be
-used by ANGSD for downstream analyses. This can be run on the AWS
-server.
+used by ANGSD for downstream analyses.
 
 ``` r
-basedir="~/exercises/day3/"
+basedir="~/lcwgs-guide-tutorial/tutorial3_ld_popstructure/"
 
 pruned_position <- as.integer(gsub("Mme_chr24_2558528-4558528:", "", readLines(paste0(basedir, "ngsld/MME_ANGSD_PCA_subsampled_unlinked.id"))))
 
