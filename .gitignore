@@ -12,3 +12,8 @@ tutorial1_data_processing/reference/*dict
 tutorial1_data_processing/sample_lists/bam_list_dedup_overlapclipped.list
 tutorial2_genotype_snp_calling/results
 tutorial2_genotype_snp_calling/reference/*fai
+tutorial3_ld_popstructure/results
+tutorial3_ld_popstructure/ngsld/LDpruned_snps.list.bin
+tutorial3_ld_popstructure/ngsld/LDpruned_snps.list.idx
+tutorial3_ld_popstructure/reference/*fai
+
