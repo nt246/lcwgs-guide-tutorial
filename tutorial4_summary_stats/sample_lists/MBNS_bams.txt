@@ -1,0 +1,15 @@
+bam/MBNS_01.bam
+bam/MBNS_02.bam
+bam/MBNS_03.bam
+bam/MBNS_04.bam
+bam/MBNS_05.bam
+bam/MBNS_06.bam
+bam/MBNS_07.bam
+bam/MBNS_08.bam
+bam/MBNS_09.bam
+bam/MBNS_10.bam
+bam/MBNS_11.bam
+bam/MBNS_12.bam
+bam/MBNS_13.bam
+bam/MBNS_14.bam
+bam/MBNS_15.bam

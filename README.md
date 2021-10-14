@@ -10,7 +10,7 @@ These tutorials were developed by Matteo Fumagalli, Arne Jacobs, Nicolas Lou, an
 
 * [Tutorial 3b: Population structure](https://github.com/nt246/lcwgs-guide-tutorial/blob/main/tutorial3_ld_popstructure/markdowns/pca_admixture.md)
 
-* [Tutorial 4: Natural selection](https://github.com/nt246/lcwgs-guide-tutorial/blob/main/tutorial4_selection/markdowns/01_sfs.md)
+* [Tutorial 4: Natural selection](https://github.com/nt246/lcwgs-guide-tutorial/blob/main/tutorial4_selection/markdowns/summary_stats.md)
 
 
 <br>

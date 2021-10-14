@@ -16,4 +16,7 @@ tutorial3_ld_popstructure/results
 tutorial3_ld_popstructure/ngsld/LDpruned_snps.list.bin
 tutorial3_ld_popstructure/ngsld/LDpruned_snps.list.idx
 tutorial3_ld_popstructure/reference/*fai
+tutorial4_summary_stats/results
+tutorial4_summary_stats/reference/*fai
+
 

@@ -1,0 +1,15 @@
+bam/PANY_01.bam
+bam/PANY_02.bam
+bam/PANY_03.bam
+bam/PANY_04.bam
+bam/PANY_05.bam
+bam/PANY_06.bam
+bam/PANY_07.bam
+bam/PANY_08.bam
+bam/PANY_09.bam
+bam/PANY_10.bam
+bam/PANY_11.bam
+bam/PANY_12.bam
+bam/PANY_13.bam
+bam/PANY_14.bam
+bam/PANY_15.bam

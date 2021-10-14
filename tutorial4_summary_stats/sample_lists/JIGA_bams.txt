@@ -1,0 +1,15 @@
+bam/JIGA_01.bam
+bam/JIGA_02.bam
+bam/JIGA_03.bam
+bam/JIGA_04.bam
+bam/JIGA_05.bam
+bam/JIGA_06.bam
+bam/JIGA_07.bam
+bam/JIGA_08.bam
+bam/JIGA_09.bam
+bam/JIGA_10.bam
+bam/JIGA_11.bam
+bam/JIGA_12.bam
+bam/JIGA_13.bam
+bam/JIGA_14.bam
+bam/JIGA_15.bam
