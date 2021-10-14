@@ -1,5 +1,5 @@
 ---
-title: "Population structure and admixture analysis"
+title: "Tutorial 3b: Population structure and admixture analysis"
 output: 
   github_document:
     toc: true

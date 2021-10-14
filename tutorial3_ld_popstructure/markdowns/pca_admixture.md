@@ -1,4 +1,4 @@
-Population structure and admixture analysis
+Tutorial 3b: Population structure and admixture analysis
 ================
 
   - [Today’s data](#todays-data)

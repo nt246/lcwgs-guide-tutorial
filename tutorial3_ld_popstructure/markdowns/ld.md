@@ -1,4 +1,4 @@
-Linkage disequilibrium estimation
+Tutorial 3a: Linkage disequilibrium estimation
 ================
 
   - [Define paths to the project directory and

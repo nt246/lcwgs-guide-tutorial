@@ -1,5 +1,5 @@
 ---
-title: "Linkage disequilibrium estimation"
+title: "Tutorial 3a: Linkage disequilibrium estimation"
 output: 
   github_document:
     toc: true
